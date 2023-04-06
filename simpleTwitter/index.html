@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- userId: 1, id: 1, title: 'delectus aut autem', completed: false-->
+</body>
+<script>
+let isOn = false;
+    async function getData(url) {  
+        const res = await fetch(url)
+        const json = await res.json()
+        return json
+    }
+
+
+
+    try{
+        for(let i = 1; i < 100; i++) {
+            getData(`https://jsonplaceholder.typicode.com/todos/${i}`)
+            .then(data => {
+            console.log(data)
+            newDiv(data)
+            })
+        }
+    } catch (error) {
+        console.log(error.message)
+    }
+
+    function newDiv(data) {
+        const element = document.createElement('div');
+        element.className += " wrapper"
+        element.innerHTML = `
+            <div class="obj">
+                <div class="title">${data.title}</div>
+                <div class="info">
+                    <div class="whoWrite">Who write this comment: id#${data.userId}</div>
+                    <div class="like">${data.id}</div>
+                </div>
+            </div>
+        `
+        document.body.appendChild(element)
+    }
+    
+    window.addEventListener('click', checkHeard)
+
+    function checkHeard(event) {
+        if (event.target.classList.contains('like')) {
+        let likes = Number(event.target.innerHTML);
+        isOn = !isOn;
+        if (isOn) {
+        likes += 1;
+        } else {
+            likes -= 1;
+        }
+        event.target.innerHTML = likes;
+        console.log(likes)
+    }
+}
+
+</script>
+</html>

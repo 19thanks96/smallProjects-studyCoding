@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html,
+body {
+	height: 100%;
+	line-height: 1;
+	font-size: 14px;
+	
+	font-family: 'Archivo Black', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.obj{
+    text-align: center;
+    padding: 20px 0 10px 0;
+}
+
+.title{
+    text-transform: uppercase;
+    font-size: 32px;
+    padding: 15px 0;
+}
+
+.info{
+    display: flex;
+}
+
+.whoWrite{
+    flex: 50%;
+}
+
+.like{
+    flex: 50%;
+}
+
+.like:before {
+    content: '\2665';
+    color: red;
+}

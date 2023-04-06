@@ -1,0 +1,49 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --main-px: 5px;
+
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.wrapper{
+    width: 80%;
+}
+
+h1{
+    margin-top:  calc(var(--main-px)* 5);
+    display: flex;
+    justify-content: center;
+}
+
+.big_project{
+    margin-top:  calc(var(--main-px)* 5);
+    margin-left: calc(var(--main-px)* 5);
+    font-size:  calc(var(--main-px)* 5);
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.small_project{
+    margin-top:  calc(var(--main-px)* 4.5);
+    margin-left: calc(var(--main-px)* 4.5);
+    font-size:  calc(var(--main-px)* 4.5);
+}
+
+.sub_menu{
+    margin-top:  calc(var(--main-px)* 4);
+    margin-left: calc(var(--main-px)* 4);
+    font-size:  calc(var(--main-px)* 4);
+}
