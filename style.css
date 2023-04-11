@@ -48,3 +48,7 @@ a{
     margin-left: calc(var(--main-px)* 4);
     font-size:  calc(var(--main-px)* 4);
 }
+
+.notEnd{
+    color: red;
+}

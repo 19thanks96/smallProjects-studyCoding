@@ -1,0 +1,18 @@
+html,
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.ball{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.highlight{
+    box-shadow: 0px 0px 20px 19px red;
+}
