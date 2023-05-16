@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
       <input type="submit" value="Submit">
     </form>
     <br>
-    <div style='text-align: center; border-radius: 10px; background-color: grey; padding: 10px 0 10px 0'>Messages:<br>
+    <div style='text-align: center; border-radius: 10px; background-color: yellow; padding: 10px 0 10px 0'>Messages:<br>
     ${messages}
     </div>
   `);

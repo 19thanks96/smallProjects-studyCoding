@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BallInBox</title>
+  <style>
+    body { margin: 0; }
+  </style>
+</head>
+<body>
+  <script src="https://pixijs.download/release/pixi.min.js"></script>
+  <script>
+    const app = new PIXI.Application({ width: 800, height: 600 });
+    document.body.appendChild(app.view);
+
+    const ball = new PIXI.Graphics();
+    ball.x = 25;
+    ball.y = 25;
+    ball.width = 50;
+    ball.beginFill(0xFF0000);
+    ball.drawCircle(ball.x, ball.y, 50);
+    ball.endFill();
+    app.stage.addChild(ball);
+
+
+    let velocityX = 5; 
+    let velocityY = 2; 
+
+
+    function update(delta) { 
+      ball.x += velocityX;
+      ball.y += velocityY;
+
+      if (ball.x + ball.width/2 > app.screen.width || ball.x < 0) {
+        velocityX *= -1; 
+        }
+      if (ball.y + ball.height/2 > app.screen.height || ball.y < 0) {
+        velocityY *= -1; 
+      }
+    }
+
+    app.ticker.add(update);
+
+  </script>
+</body>
+</html>
+
